@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,47 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Guess_The_Flag_HWS_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6q-sM-2RB">
+                                <rect key="frame" x="107" y="230" width="200" height="100"/>
+                                <state key="normal" image="spain"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z08-rC-naH">
+                                <rect key="frame" x="107" y="100" width="200" height="100"/>
+                                <state key="normal" image="spain"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3t-Wo-Vbc">
+                                <rect key="frame" x="107" y="360" width="200" height="100"/>
+                                <state key="normal" image="spain"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="o6q-sM-2RB" firstAttribute="centerX" secondItem="Z08-rC-naH" secondAttribute="centerX" id="3db-ei-oua"/>
+                            <constraint firstItem="U3t-Wo-Vbc" firstAttribute="top" secondItem="o6q-sM-2RB" secondAttribute="bottom" constant="30" id="GdD-CD-bqE"/>
+                            <constraint firstItem="U3t-Wo-Vbc" firstAttribute="centerX" secondItem="o6q-sM-2RB" secondAttribute="centerX" id="Hv9-jh-bqC"/>
+                            <constraint firstItem="Z08-rC-naH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="QcB-MS-sCQ"/>
+                            <constraint firstItem="Z08-rC-naH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gEh-zy-uOu"/>
+                            <constraint firstItem="o6q-sM-2RB" firstAttribute="top" secondItem="Z08-rC-naH" secondAttribute="bottom" constant="30" id="jSc-bK-EOL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="button1" destination="Z08-rC-naH" id="NHk-Gt-gCk"/>
+                        <outlet property="button2" destination="o6q-sM-2RB" id="v8G-R7-ojy"/>
+                        <outlet property="button3" destination="U3t-Wo-Vbc" id="OAh-gz-4ru"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="368" y="-80"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="spain" width="200" height="100"/>
+    </resources>
 </document>
